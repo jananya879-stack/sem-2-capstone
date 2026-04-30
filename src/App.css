@@ -1,0 +1,404 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  min-height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TITLE */
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SEARCH BAR */
+.search-box {
+  width: 60%;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: 0.3s;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+/* GENRE BUTTONS */
+.genre-container {
+  margin: 20px 0;
+}
+
+.genre-container button {
+  margin: 6px;
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+
+  background: linear-gradient(135deg, #1e293b, #334155);
+  color: white;
+  transition: 0.3s;
+}
+
+.genre-container button:hover {
+  background: linear-gradient(135deg, #38bdf8, #a78bfa);
+  transform: scale(1.1);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* CARD CONTENT */
+.card h3 {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 40px rgba(56, 189, 248, 0.4);
+}
+
+/* GLOW BORDER */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, #38bdf8, #a78bfa);
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* DETAILS PAGE */
+
+/* PAGE CENTER */
+.details-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  padding: 20px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #38bdf8, #a78bfa);
+  color: white;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+/* CARD */
+.details-card {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* POSTER */
+.details-poster {
+  width: 250px;
+  border-radius: 15px;
+}
+
+/* CONTENT */
+.details-content {
+  text-align: left;
+}
+
+/* TITLE */
+.details-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TAGLINE */
+.tagline {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* RATING */
+.rating {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #facc15;
+}
+
+/* OVERVIEW */
+.overview {
+  margin: 15px 0;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* META */
+.meta {
+  display: flex;
+  gap: 15px;
+  color: #cbd5f5;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .details-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-content {
+    text-align: center;
+  }
+}
+
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+/* HERO BACKGROUND */
+
+
+
+
+/* MAIN CARD */
+
+
+/* TAGLINE */
+.tagline {
+  font-style: italic;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+/* RATING */
+.rating {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #facc15;
+}
+
+/* OVERVIEW */
+.overview {
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* META */
+.meta {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  color: #cbd5f5;
+}
+
+/* PAGE CENTERING */
+
+/* BACK BUTTON */
+.back-btn {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #38bdf8, #a78bfa);
+  color: white;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+/* CARD */
+
+
+/* TAGLINE */
+.tagline {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* RATING */
+.rating {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #facc15;
+}
+
+/* OVERVIEW */
+.overview {
+  margin: 15px 0;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* META */
+.meta {
+  display: flex;
+  gap: 15px;
+  color: #cbd5f5;
+}
+
+/* THEMES */
+body.dark {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+}
+
+body.light {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* SMOOTH TRANSITION */
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* TOGGLE BUTTON */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  font-size: 18px;
+
+  background: linear-gradient(135deg, #38bdf8, #a78bfa);
+  color: white;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* DARK MODE (default already dark) */
+body.dark .details-page {
+  color: white;
+}
+
+/* LIGHT MODE FIX */
+body.light .details-page {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* CARD LIGHT MODE */
+body.light .details-card {
+  background: rgba(0, 0, 0, 0.05);
+  color: #0f172a;
+}
+
+/* TEXT FIXES */
+body.light .tagline {
+  color: #475569;
+}
+
+body.light .overview {
+  color: #1e293b;
+}
+
+body.light .meta {
+  color: #334155;
+}
